@@ -1,0 +1,28 @@
+@import '../../Variables';
+
+.navbar {
+  @include flex-center;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0.4rem 0.8rem;
+  background-color: $accent-color;
+  width: 100%;
+
+  .logo {
+    width: 4rem;
+  }
+
+  .navlinks {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+  }
+
+  a {
+    border-radius: $radius-sm;
+    padding: 1.2rem 2.4rem;
+  }
+
+  .active {
+    background-color: $base-bg;
+  }
+}

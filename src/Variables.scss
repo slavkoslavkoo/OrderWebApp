@@ -1,0 +1,10 @@
+$base-bg: #f5f5f5;
+$text-color: #2f2f2f;
+$accent-color: #94d82d;
+$radius-sm: 0.6rem;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
