@@ -1,0 +1,81 @@
+@import '../../Variables.scss';
+
+@mixin card-item {
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 0.4rem;
+}
+
+@mixin padding {
+  padding: 0.4rem;
+}
+
+.card {
+  @include flex-column;
+  padding: 1.2rem;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  background-color: $main-bg;
+  border-radius: $radius-lg;
+
+  .date {
+    @include padding;
+  }
+
+  .title {
+    background-color: $card-bg;
+    border-radius: $radius-sm;
+    @include padding;
+
+    .email {
+      @include card-item;
+
+      span {
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+
+    .item {
+      @include card-item;
+      font-weight: 500;
+
+      span {
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .body {
+    @include padding;
+
+    .description {
+      @include card-item;
+    }
+  }
+
+  .btns {
+    @include padding;
+    display: flex;
+    justify-content: space-between;
+
+    @mixin btn {
+      border-radius: $radius-sm;
+      padding: 0.8rem 1.4rem;
+    }
+
+    .complete {
+      background-color: $accent-color;
+      @include btn;
+    }
+
+    .delete {
+      @include btn;
+      background-color: $warn-color;
+      color: $main-bg;
+    }
+  }
+}

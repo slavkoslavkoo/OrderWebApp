@@ -12,7 +12,7 @@ img {
 }
 
 body {
-  background-color: $base-bg;
+  background-color: $body-bg;
   color: $text-color;
 }
 
@@ -29,10 +29,16 @@ ul {
 button {
   border: none;
   background-color: none;
+  color: $text-color;
 }
 
 a:link,
 a:visited {
   text-decoration: none;
   color: $text-color;
+}
+
+.container {
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
 }

@@ -1,0 +1,30 @@
+@import '../../Variables.scss';
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.container {
+  @include flex-center;
+  @include fullscreen;
+  z-index: 9999;
+
+  .spinnerbox {
+    @include flex-center;
+    background-color: #2f2f2fd9;
+    padding: 2.4rem;
+    border-radius: $radius-sm;
+
+    .spinner {
+      $size: 4.6rem;
+      width: $size;
+      height: $size;
+      border-radius: ($size * 0.5);
+      border: 0.2rem solid $accent-color;
+      border-bottom-color: transparent;
+      animation: infinite spinner 1s linear;
+    }
+  }
+}

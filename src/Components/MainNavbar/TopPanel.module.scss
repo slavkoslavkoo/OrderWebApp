@@ -1,0 +1,20 @@
+@import '../../Variables.scss';
+
+.panel {
+  @include flex-center;
+  position: fixed;
+  top: 0;
+  gap: 1.2rem;
+  width: 100%;
+  padding: 1.2rem;
+  background-color: $accent-color;
+  color: $main-bg;
+
+  .logo {
+    width: 3rem;
+  }
+
+  .text {
+    font-size: 2.4rem;
+  }
+}
