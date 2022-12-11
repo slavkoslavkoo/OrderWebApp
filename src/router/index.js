@@ -5,7 +5,8 @@ import ErrorComponent from '../Components/Errors/ErrorComponent';
 import Orders from '../Pages/Orders';
 import Questions from '../Pages/Questions';
 
-import OrdersLoader from '../utils/orders-loader';
+import ordersLoader from '../utils/orders-loader';
+import questionsLoader from '../utils/questions-loader';
 
 const router = createBrowserRouter([
   {
@@ -16,11 +17,12 @@ const router = createBrowserRouter([
       {
         path: '/orders',
         element: <Orders />,
-        loader: OrdersLoader,
+        loader: ordersLoader,
       },
       {
         path: '/questions',
         element: <Questions />,
+        loader: questionsLoader,
       },
     ],
   },

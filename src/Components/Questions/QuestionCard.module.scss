@@ -1,0 +1,48 @@
+@import '../../Variables.scss';
+
+@mixin padding {
+  padding: 0.8rem 1.2rem;
+}
+
+@mixin card-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.card {
+  @include flex-column;
+  padding: 1.2rem;
+  justify-content: flex-start;
+  background-color: $main-bg;
+  border-radius: $radius-lg;
+
+  .date {
+    @include padding();
+  }
+
+  .title {
+    @include padding();
+    @include flex-column;
+    gap: 1.2rem;
+    background-color: $card-bg;
+    border-radius: $radius-sm;
+    font-weight: 500;
+
+    .name {
+      @include card-item();
+      font-size: 1.6rem;
+    }
+
+    .mail {
+      @include card-item();
+    }
+  }
+
+  .text {
+    @include padding();
+    @include card-item;
+    font-size: 1.4rem;
+  }
+}

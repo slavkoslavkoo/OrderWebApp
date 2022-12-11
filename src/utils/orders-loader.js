@@ -1,6 +1,6 @@
 const ordersLoader = async () => {
   const request = await fetch(
-    'https://simpledevorders-default-rtdb.europe-west1.firebasedatabase.app/orders.json'
+    `https://simpledevorders-default-rtdb.europe-west1.firebasedatabase.app/orders.json`
   );
   const result = await request.json();
 

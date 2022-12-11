@@ -27,25 +27,15 @@
   .title {
     background-color: $card-bg;
     border-radius: $radius-sm;
+    font-weight: 500;
     @include padding;
 
     .email {
       @include card-item;
-
-      span {
-        font-weight: 400;
-        font-size: 1.2rem;
-      }
     }
 
     .item {
       @include card-item;
-      font-weight: 500;
-
-      span {
-        font-weight: 400;
-        font-size: 1.2rem;
-      }
     }
   }
 

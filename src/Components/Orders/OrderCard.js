@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './OrderCard.module.scss';
+import { FiMail, FiCpu } from 'react-icons/fi';
 
 const OrderCard = ({ order }) => {
   return (
@@ -8,11 +9,12 @@ const OrderCard = ({ order }) => {
       <p className={styles.date}>{order.date}</p>
 
       <div className={styles.title}>
-        <h3 className={styles.email}>
-          <span>From</span> {order.email}
-        </h3>
+        <a href={`mailto:${order.email}`} className={styles.email}>
+          <FiMail />
+          {order.email}
+        </a>
         <p className={styles.item}>
-          <span>Orders</span>
+          <FiCpu />
           {order.orderedItem}
         </p>
       </div>
