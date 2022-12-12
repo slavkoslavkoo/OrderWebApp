@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorComponent />,
     children: [
       {
-        path: '/orders',
+        path: '/',
         element: <Orders />,
         loader: ordersLoader,
       },

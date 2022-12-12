@@ -8,7 +8,7 @@ const MainNavbar = () => {
     <div className={styles.navbar}>
       <nav className={styles.navlinks}>
         <NavLink
-          to={'/orders'}
+          to={'/'}
           className={({ isActive }) => (isActive ? styles.active : '')}>
           Orders
         </NavLink>
